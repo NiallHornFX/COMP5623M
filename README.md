@@ -1,22 +1,24 @@
-#### COMP5623M : CNN Classification & Visualisation 
+#### COMP5623M - Convolutional Image Classification and Visualisation
 
-###### Niall Horn - March 2022
-
-___
-
-##### Info
-
-This was a small project for COMP5623M written at University of Leeds (2021/2022) to train a basic CNN architecture using supervised learning for image classification. Additionally the learnt filters, convolved feature maps and class weighted activations are visualised using Grad-CAM. 
-
-Further information is provided on [my website](https://www.niallhorn.dev). 
-
-___
-
-##### Usage
-
-This repo currently contains just the Jupyter Notebook used to complete the assignment. I intend to come back to this and write it in pure Python form. 
+* Short summary of COMP5623M CW1 - Image Classification and CNN Visualisation 
 
 ____
+
+
+
+<img src="C:\Users\Niall\Dropbox\nhdev_website\_portfolio\_work_dev\portfolio_COMP5623M\_figures\gradcam_01.PNG" alt="gradcam_01" style="zoom:50%;" />
+
+​                                       Stand in image (most likely column tile a few for header)
+
+**Languages / Libraries Used:** Python, PyTorch, OpenCV
+
+This project was part of the coursework for COMP5623M - Deep Learning at University of Leeds, which involved two stages: Training a small convolutional neural network (CNN) on a subset of Tiny ImageNet and then visualising the learnt filters, resulting feature maps, and gradients using GradCAM. 
+
+The CNN architecture was relatively simple and able to train on a single machine overnight, made up of just a few convolutional layers, utilising ReLu activation and max pooling operations for downsampling into fully connected latent space. The model was trained using supervised learning with a Cross Entropy loss function and utilised the Adam optimizer. Data augmentation was performed to increase the breadth of training samples and thus improve the overall accuracy and generalisation. 	<img src="C:\Users\Niall\Dropbox\nhdev_website\_portfolio\_work_dev\portfolio_COMP5623M\_figures\TrainGraph.PNG" alt="TrainGraph" style="zoom: 50%;" />
+
+Visualisation of the resulting model along with a reference AlexNet was the performed, first viewing the learnt filters as simple PyPlots. Next feature maps are convolved by these filters are visualised to view the receptive field of the network given a single training sample. Finally Gradient Weighted Class Activation Mapping (GradCAM) is used to visualise localisation maps to highlight relevant regions of each class to examine the models prediction. 
+
+_____
 
 ##### Building
 
